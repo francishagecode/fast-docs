@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fast-docs</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/vendor/marked.min.js"></script>
+    <script src="assets/js/vendor/fuse.basic.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <mobile-drawer sidebar-selector="docs-sidebar">
+          <button class="menu-btn" aria-label="Toggle menu">
+            <span class="menu-icon">≡</span>
+          </button>
+          <div class="overlay"></div>
+        </mobile-drawer>
+        <a class="site-title" href="#/">
+          <span class="title-text">fast-docs</span>
+        </a>
+        <docs-search>
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Search..."
+            autocomplete="off"
+          />
+          <div class="search-results"></div>
+        </docs-search>
+        <theme-toggle>
+          <button class="theme-btn" aria-label="Toggle theme">☾</button>
+        </theme-toggle>
+      </nav>
+    </header>
+
+    <div class="shell">
+      <docs-sidebar>
+        <nav class="sidebar-nav">
+          <p class="loading" style="padding-left: 20px">loading</p>
+        </nav>
+      </docs-sidebar>
+      <docs-content>
+        <div class="content">
+          <p class="loading">loading</p>
+        </div>
+      </docs-content>
+    </div>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>
